@@ -72,7 +72,7 @@ export function Hero() {
     if (window.Calendly) {
       // @ts-ignore
       window.Calendly.initPopupWidget({
-        url: "https://calendly.com/pcubesolution/enterprise-demo",
+        url: "https://calendly.com/dubeyjiicafe/enterprise-product-demo",
       });
     } else {
       alert("Scheduler is loading, please try again in a second.");
