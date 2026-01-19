@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Switch, Route } from "wouter";
 import Home from "./pages/home";
 import NotFound from "./pages/not-found";
-import { loadChatbase } from "@/lib/chatbase";
+import { loadTawk } from "@/lib/tawk";
 
 
 export default function App() {
