@@ -8,9 +8,12 @@ import { loadCalendly } from "@/lib/calendly";
 
 export default function App() {
   useEffect(() => {
+    loadCalendly();
+  }, []);
+  useEffect(() => {
     if (import.meta.env.PROD) {
       loadTawk();
-      loadCalendly();
+
     }
   }, []);
   return (
