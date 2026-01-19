@@ -1,4 +1,5 @@
 import { Shield, Mail, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Link } from "wouter";
 
 export function Footer() {
   return (
@@ -46,7 +47,13 @@ export function Footer() {
             <ul className="space-y-3">
               <li><a href="#" className="text-white/60 hover:text-primary text-sm transition-colors">About Us</a></li>
               <li><a href="#" className="text-white/60 hover:text-primary text-sm transition-colors">Careers</a></li>
-              <li><a href="#" className="text-white/60 hover:text-primary text-sm transition-colors">Blog</a></li>
+              <li>
+  <Link href="/blog">
+    <a className="text-white/60 hover:text-primary text-sm transition-colors">
+      Blog
+    </a>
+  </Link>
+</li>
               <li><a href="#" className="text-white/60 hover:text-primary text-sm transition-colors">Legal</a></li>
             </ul>
           </div>
