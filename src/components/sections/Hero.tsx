@@ -60,18 +60,28 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button
+           <Button
   size="lg"
   className="h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white text-lg"
-  onClick={() => {
+  onClick={async () => {
+    await import("@/lib/calendly").then(({ loadCalendly }) =>
+      loadCalendly()
+    );
+
     // @ts-ignore
-    window.Calendly.initPopupWidget({
-      url: "https://calendly.com/dubeyjiicafe/enterprise-product-demo",
-    });
+    if (window.Calendly) {
+      // @ts-ignore
+      window.Calendly.initPopupWidget({
+        url: "https://calendly.com/pcubesolution/enterprise-demo",
+      });
+    } else {
+      alert("Scheduler is loading, please try again in a second.");
+    }
   }}
 >
   Request Enterprise Demo
 </Button>
+
             <Button size="lg" variant="outline" className="h-14 px-8 rounded-full border-white/20 text-white hover:bg-white/10 hover:border-white/40">
               <Play className="mr-2 w-4 h-4 fill-current" /> Watch Video
             </Button>
