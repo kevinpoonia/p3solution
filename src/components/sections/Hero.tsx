@@ -69,18 +69,14 @@ export function Hero() {
     );
 
     // @ts-ignore
-    if (window.Calendly) {
-      // @ts-ignore
-      window.Calendly.initPopupWidget({
-        url: "https://calendly.com/dubeyjiicafe/enterprise-product-demo",
-      });
-    } else {
-      alert("Scheduler is loading, please try again in a second.");
-    }
+    window.Calendly.initPopupWidget({
+      url: "https://calendly.com/dubeyjiicafe/enterprise-product-demo",
+    });
   }}
 >
   Request Enterprise Demo
 </Button>
+
 
             <Button size="lg" variant="outline" className="h-14 px-8 rounded-full border-white/20 text-white hover:bg-white/10 hover:border-white/40">
               <Play className="mr-2 w-4 h-4 fill-current" /> Watch Video
