@@ -9,6 +9,7 @@ import RespondingToNegativeReviews from "@/pages/blog/responding-to-negative-rev
 import AISentimentAnalysis from "@/pages/blog/ai-sentiment-analysis-reputation";
 import ReviewAutomation from "@/pages/blog/review-automation-platform";
 import EmployerReputation from "@/pages/blog/employer-reputation-management";
+import BlogIndex from "@/pages/blog";
 
 
 export default function App() {
@@ -24,13 +25,14 @@ export default function App() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      
-      <Route component={NotFound} />
+      <Route path="/blog" component={BlogIndex} />
     <Route path="/blog/enterprise-reputation-management" component={EnterpriseReputationManagementBlog} />
 <Route path="/blog/responding-to-negative-reviews" component={RespondingToNegativeReviews} />
 <Route path="/blog/ai-sentiment-analysis-reputation" component={AISentimentAnalysis} />
 <Route path="/blog/review-automation-platform" component={ReviewAutomation} />
 <Route path="/blog/employer-reputation-management" component={EmployerReputation} />
+
+      <Route component={NotFound} />
 
     </Switch>
   );
