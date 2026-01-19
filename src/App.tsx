@@ -8,7 +8,7 @@ import { loadTawk } from "@/lib/tawk";
 export default function App() {
   useEffect(() => {
     if (import.meta.env.PROD) {
-      loadChatbase();
+      loadTawk();
     }
   }, []);
   return (
